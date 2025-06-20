@@ -1,6 +1,7 @@
 import BreadcrumbSection from '@/components/common/bread-crumb-section'
 import SearchBoxSection from '@/components/common/search-box-section'
 import Link from 'next/link'
+import Image from 'next/image' // Import Image from next/image
 
 const Services = () => {
   return (
@@ -46,13 +47,15 @@ const Services = () => {
 
           <div className='col-span-12 rounded-xl border border-[#1B3B86]/10 p-4 sm:p-8 lg:col-span-8'>
             <div className='flex flex-col gap-4'>
-              {/* Service Card - repeated structure */}
+              {/* Service Card 1 */}
               <div className='flex items-center justify-between gap-3 rounded-2xl border border-[#1B3B86]/10 p-3 max-md:flex-col'>
                 <div className='flex items-center justify-start max-xxl:gap-2 max-sm:flex-col'>
                   <div className='flex items-center justify-center self-stretch sm:w-[80%]'>
-                    <img
+                    <Image
                       src='/assets/images/workers_profile_service_img1.png'
-                      alt=''
+                      alt='Sparkle Ease Cleaning Solutions image'
+                      width={300} // Adjust based on design
+                      height={200} // Adjust based on design
                       className='rounded-2xl object-cover'
                     />
                   </div>
@@ -62,15 +65,30 @@ const Services = () => {
                     </h5>
                     <div className='flex flex-wrap gap-1 pt-3 text-sm text-gray-600 xxl:pt-6'>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/settings_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/settings_icon.png'
+                          alt='Handyman icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Handyman</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Cleaning icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Cleaning</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Plumber icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Plumber</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2 font-medium'>
@@ -94,12 +112,16 @@ const Services = () => {
                   </Link>
                 </div>
               </div>
+
+              {/* Service Card 2 */}
               <div className='flex items-center justify-between gap-3 rounded-2xl border border-[#1B3B86]/10 p-3 max-md:flex-col'>
                 <div className='flex items-center justify-start max-xxl:gap-2 max-sm:flex-col'>
                   <div className='flex items-center justify-center self-stretch sm:w-[80%]'>
-                    <img
+                    <Image
                       src='/assets/images/workers_profile_service_img2.png'
-                      alt=''
+                      alt='Sparkle Ease Cleaning Solutions image'
+                      width={300} // Adjust based on design
+                      height={200} // Adjust based on design
                       className='rounded-2xl object-cover'
                     />
                   </div>
@@ -109,15 +131,30 @@ const Services = () => {
                     </h5>
                     <div className='flex flex-wrap gap-1 pt-3 text-sm text-gray-600 xxl:pt-6'>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/settings_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/settings_icon.png'
+                          alt='Handyman icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Handyman</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Cleaning icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Cleaning</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Plumber icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Plumber</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2 font-medium'>
@@ -141,12 +178,16 @@ const Services = () => {
                   </a>
                 </div>
               </div>
+
+              {/* Service Card 3 */}
               <div className='flex items-center justify-between gap-3 rounded-2xl border border-[#1B3B86]/10 p-3 max-md:flex-col'>
                 <div className='flex items-center justify-start max-xxl:gap-2 max-sm:flex-col'>
                   <div className='flex items-center justify-center self-stretch sm:w-[80%]'>
-                    <img
+                    <Image
                       src='/assets/images/workers_profile_service_img3.png'
-                      alt=''
+                      alt='Sparkle Ease Cleaning Solutions image'
+                      width={300} // Adjust based on design
+                      height={200} // Adjust based on design
                       className='rounded-2xl object-cover'
                     />
                   </div>
@@ -156,15 +197,30 @@ const Services = () => {
                     </h5>
                     <div className='flex flex-wrap gap-1 pt-3 text-sm text-gray-600 xxl:pt-6'>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/settings_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/settings_icon.png'
+                          alt='Handyman icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Handyman</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Cleaning icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Cleaning</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium hover:bg-[#1B3B86]/10 transition-colors'>
-                        <img src='/assets/images/tap_icon.png' alt='' />
+                        <Image
+                          src='/assets/images/tap_icon.png'
+                          alt='Plumber icon'
+                          width={16}
+                          height={16}
+                        />
                         <span>Plumber</span>
                       </p>
                       <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2 font-medium'>
@@ -188,7 +244,6 @@ const Services = () => {
                   </a>
                 </div>
               </div>
-              {/* Service Card repeated structure ends */}
             </div>
 
             {/* Pagination */}

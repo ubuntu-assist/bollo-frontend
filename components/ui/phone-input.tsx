@@ -7,7 +7,6 @@ import { IconAlertCircle, IconCheck, IconPhone } from '@tabler/icons-react'
 import { cn } from '@/lib/utils'
 import 'react-phone-number-input/style.css'
 
-// Button Component with Bollo styling
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'outline'
   size?: 'default' | 'sm' | 'lg'
@@ -15,16 +14,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variant = 'default',
-      size = 'default',
-      asChild = false,
-      ...props
-    },
-    ref
-  ) => {
+  ({ className, variant = 'default', size = 'default', ...props }, ref) => {
     const variants = {
       default: 'bg-[#1B3B86] text-white hover:bg-[#1B3B86]/90',
       outline: 'border border-gray-200 bg-white hover:bg-gray-50 text-gray-600',
@@ -289,22 +279,21 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> =
   )
 PhoneInput.displayName = 'PhoneInput'
 
-// Input Component
-const InputComponent = React.forwardRef<HTMLInputElement, any>(
-  ({ className, ...props }, ref) => (
-    <input
-      className={cn(
-        'flex h-11 w-full rounded-r-lg border-y border-r border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1B3B86]/20 focus-visible:border-[#1B3B86] disabled:cursor-not-allowed disabled:opacity-50',
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  )
-)
+const InputComponent = React.forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement>
+>(({ className, ...props }, ref) => (
+  <input
+    className={cn(
+      'flex h-11 w-full rounded-r-lg border-y border-r border-gray-200 bg-white px-3 py-2 text-sm text-gray-600 ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1B3B86]/20 focus-visible:border-[#1B3B86] disabled:cursor-not-allowed disabled:opacity-50',
+      className
+    )}
+    ref={ref}
+    {...props}
+  />
+))
 InputComponent.displayName = 'InputComponent'
 
-// Country Select Types
 type CountrySelectOption = { label: string; value: RPNInput.Country }
 
 type CountrySelectProps = {
@@ -431,7 +420,6 @@ const CountrySelect = ({
   )
 }
 
-// Flag Component
 const FlagComponent = ({ country, countryName }: RPNInput.FlagProps) => {
   const Flag = flags[country]
 

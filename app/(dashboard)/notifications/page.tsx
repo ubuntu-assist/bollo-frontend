@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface Notification {
   id: string
@@ -550,9 +551,11 @@ const NotificationsPage = () => {
                   {/* Avatar or Icon */}
                   <div className='flex-shrink-0'>
                     {notification.avatar ? (
-                      <img
+                      <Image
                         src={notification.avatar}
                         alt='User avatar'
+                        width={48} // Based on size-12 class (~48px)
+                        height={48}
                         className='size-12 rounded-full object-cover'
                       />
                     ) : (

@@ -7,7 +7,6 @@ import Joyride, {
   STATUS,
   EVENTS,
   ACTIONS,
-  LIFECYCLE,
 } from 'react-joyride'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -24,9 +23,7 @@ interface WelcomeGuideProps {
   onComplete?: () => void
 }
 
-// Custom Tooltip Component pour matcher votre design
 const CustomTooltip = ({
-  continuous,
   index,
   step,
   backProps,
@@ -175,8 +172,9 @@ const WelcomeModal = ({
             Welcome to Bollo! 🎉
           </h2>
           <p className='text-gray-600 mb-6 leading-relaxed'>
-            Let's take a quick tour to help you get started. We'll show you the
-            key features and how to make the most of your experience.
+            Let&apos;s take a quick tour to help you get started. We&apos;ll
+            show you the key features and how to make the most of your
+            experience.
           </p>
 
           {/* Benefits */}
@@ -295,7 +293,7 @@ const WelcomeGuide: React.FC<WelcomeGuideProps> = ({
 
   // Gestion des callbacks du tour
   const handleJoyrideCallback = (data: CallBackProps) => {
-    const { status, type, index, action, lifecycle } = data
+    const { status, type, index, action } = data
 
     if (([STATUS.FINISHED, STATUS.SKIPPED] as string[]).includes(status)) {
       // Tour terminé ou skippé
@@ -327,7 +325,7 @@ const WelcomeGuide: React.FC<WelcomeGuideProps> = ({
 
   // Exposer la fonction pour un usage externe
   useEffect(() => {
-    // @ts-ignore - Ajouter à window pour usage global
+    // @ts-expect-error - Ajouter à window pour usage global
     window.startBolloTour = restartTour
   }, [])
 
@@ -388,11 +386,8 @@ export const useWelcomeGuide = () => {
   const [isNewUser, setIsNewUser] = useState(false)
 
   useEffect(() => {
-    // Logique pour déterminer si c'est un nouvel utilisateur
     const hasSeenTour = localStorage.getItem('bollo-tour-completed')
-    const userRegistrationDate = localStorage.getItem('user-registration-date')
 
-    // Exemple de logique
     if (!hasSeenTour) {
       setIsNewUser(true)
     }

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -47,10 +48,13 @@ const SignIn = () => {
           {/* Logo */}
           <div>
             <Link href='/'>
-              <img
+              <Image
                 src='/assets/images/logo.png'
                 alt='Bollo logo'
+                width={96} // Adjust width based on your design needs (h-24 implies ~96px at default density)
+                height={96}
                 className='h-24 w-auto'
+                priority // Optional: prioritize loading for logo
               />
             </Link>
           </div>
@@ -58,7 +62,12 @@ const SignIn = () => {
           {/* Welcome Text */}
           <div className='flex items-center justify-center pt-8'>
             <p className='heading-5 text-gray-900'>Welcome to Bollo</p>
-            <img src='./assets/images/victor_icon.png' alt='' />
+            <Image
+              src='/assets/images/victor_icon.png'
+              alt='Victor icon'
+              width={24} // Adjust based on your design
+              height={24}
+            />
           </div>
 
           {/* Form */}
@@ -123,7 +132,7 @@ const SignIn = () => {
 
               {/* Sign Up Link */}
               <div className='flex items-center justify-center gap-2 py-3 text-sm font-medium'>
-                <p className='text-gray-600'>Don't have an account?</p>
+                <p className='text-gray-600'>Don&apos;t have an account?</p>
                 <Link
                   href='/signup'
                   className='text-[#1B3B86] hover:text-[#E31C79] transition-colors underline'
@@ -137,9 +146,11 @@ const SignIn = () => {
                 type='button'
                 className='mt-6 flex w-full items-center justify-center gap-2 rounded-2xl border border-[#1B3B86]/10 bg-white py-3 hover:bg-[#1B3B86]/5 transition-colors shadow-sm'
               >
-                <img
+                <Image
                   src='/assets/images/google_icon.png'
                   alt='Sign in with Google'
+                  width={24} // Adjust based on your design
+                  height={24}
                 />
                 <span className='text-sm text-gray-900'>Google</span>
               </button>
@@ -148,9 +159,11 @@ const SignIn = () => {
                 type='button'
                 className='mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-[#1B3B86]/10 bg-white py-3 hover:bg-[#1B3B86]/5 transition-colors shadow-sm'
               >
-                <img
+                <Image
                   src='/assets/images/facebook_icon.png'
                   alt='Sign in with Facebook'
+                  width={24} // Adjust based on your design
+                  height={24}
                 />
                 <span className='text-sm text-gray-900'>Facebook</span>
               </button>

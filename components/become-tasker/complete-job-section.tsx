@@ -12,7 +12,7 @@ const CompleteJobSection = () => {
             <div>
               <div className='flex items-center justify-between gap-2 lg:gap-5'>
                 <p className='font-medium text-[#1B3B86]'>
-                  Hurray! it's payday
+                  Hurray! it&apos;s payday
                 </p>
                 <p className='text-sm text-gray-500'>1m ago</p>
               </div>

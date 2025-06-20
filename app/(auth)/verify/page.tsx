@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image' // Import Image from next/image
 import { useRouter } from 'next/navigation'
 import { FC, useEffect, useRef, useState } from 'react'
 
@@ -143,6 +144,7 @@ const OTPVerification: FC = () => {
       // Redirect to success page or dashboard
       router.push('/dashboard')
     } catch (err) {
+      console.log(err)
       setError('Invalid verification code. Please try again.')
     } finally {
       setIsVerifying(false)
@@ -163,6 +165,7 @@ const OTPVerification: FC = () => {
       // Show success message
       // You could add a success toast here
     } catch (err) {
+      console.log(err)
       setError('Failed to resend verification code. Please try again.')
     }
   }
@@ -175,10 +178,13 @@ const OTPVerification: FC = () => {
           {/* Logo */}
           <div>
             <Link href='/'>
-              <img
+              <Image
                 src='/assets/images/logo.png'
                 alt='Bollo logo'
+                width={96} // Adjust width based on h-24 (~96px at default density)
+                height={96}
                 className='h-24 w-auto'
+                priority // Prioritize loading for logo
               />
             </Link>
           </div>
@@ -187,7 +193,7 @@ const OTPVerification: FC = () => {
           <div className='flex flex-col items-center justify-center pt-8 text-center'>
             <h1 className='heading-5 text-gray-900'>Verify your email</h1>
             <p className='mt-2 text-gray-600'>
-              We've sent a verification code to{' '}
+              We&apos;ve sent a verification code to{' '}
               <span className='font-medium'>{maskEmail(email)}</span>
             </p>
             <div className='mt-2 rounded-lg bg-blue-50 p-3 text-sm text-blue-800 shadow-sm'>

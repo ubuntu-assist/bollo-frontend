@@ -28,8 +28,8 @@ const BreadcrumbSection = () => {
               Turn this search into a job post
             </h3>
             <p className='max-w-[500px] pt-3 text-lg font-medium text-gray-600'>
-              Post a job for free and we'll match you with experts perfect for
-              your needs.
+              Post a job for free and we&lsquo;ll match you with experts perfect
+              for your needs.
             </p>
             <div className='pt-8'>
               <a

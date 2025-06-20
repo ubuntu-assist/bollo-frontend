@@ -37,7 +37,8 @@ const FaqSection = () => {
             Your questions <span className='text-[#1B3B86]'>answered.</span>
           </h2>
           <p className='pb-6 font-medium text-gray-600 xl:pb-10'>
-            Let's do our best to answer your most frequently asked questions.
+            Let&apos;s do our best to answer your most frequently asked
+            questions.
           </p>
 
           {/* Contact Card */}
@@ -51,8 +52,8 @@ const FaqSection = () => {
                   Still have questions?
                 </h5>
                 <p className='pt-3 text-gray-600'>
-                  Can't find the answer you're looking for? Please chat to our
-                  friendly team!
+                  Can&apos;t find the answer you&apos;re looking for? Please
+                  chat to our friendly team!
                 </p>
               </div>
             </div>

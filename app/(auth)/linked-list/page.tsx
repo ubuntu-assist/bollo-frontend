@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useCallback, useRef, useEffect } from 'react'
+import React, { useState, useCallback, useRef } from 'react'
 import { Undo2, Redo2, Trash2, Circle, Square, Triangle } from 'lucide-react'
 
 // Linked List Node for storing drawing actions

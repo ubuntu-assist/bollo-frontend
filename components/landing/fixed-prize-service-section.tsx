@@ -9,8 +9,8 @@ const FixedPriceServiceSection = () => {
             Be your own <span className='text-[#1B3B86] underline'>boss</span>
           </h2>
           <p className='pb-6 pt-3 sm:pb-8 text-gray-600'>
-            Whether you're a genius spreadsheet guru or a diligent carpenter,
-            find your next job on Bollo.
+            Whether you&apos;re a genius spreadsheet guru or a diligent
+            carpenter, find your next job on Bollo.
           </p>
 
           <ul className='flex flex-col gap-4'>

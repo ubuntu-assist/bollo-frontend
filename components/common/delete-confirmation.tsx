@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
-import { DeleteIcon, Trash2Icon, TriangleDashedIcon } from 'lucide-react'
+import { DeleteIcon } from 'lucide-react'
 
 interface DeleteConfirmationProps {
   isOpen: boolean
@@ -13,7 +13,6 @@ const DeleteConfirmation: React.FC<DeleteConfirmationProps> = ({
   isOpen,
   onConfirm,
   onCancel,
-  onClose,
 }) => {
   const mainRef = useRef<HTMLDivElement>(null)
   const deleteBtnRef = useRef<HTMLButtonElement>(null)

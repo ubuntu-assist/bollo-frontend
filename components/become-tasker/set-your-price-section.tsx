@@ -8,8 +8,8 @@ const SetYourPriceSection = () => {
             Set your <span className='text-[#1B3B86]'>price</span>
           </h2>
           <p className='pt-4 text-base font-medium text-gray-600 sm:text-lg'>
-            Found a job you're up for? Set your price and make an offer. You can
-            adjust and discuss it later if you need to.
+            Found a job you&apos;re up for? Set your price and make an offer.
+            You can adjust and discuss it later if you need to.
           </p>
 
           {/* CTA Button */}

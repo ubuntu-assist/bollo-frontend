@@ -1,5 +1,6 @@
 import BreadcrumbSection from '@/components/common/bread-crumb-section'
 import SearchBoxSection from '@/components/common/search-box-section'
+import Image from 'next/image'
 
 const BrowseTasks = () => {
   return (
@@ -14,16 +15,31 @@ const BrowseTasks = () => {
                 <p className='heading-5'>New Home Cleaning Solutions</p>
                 <div className='flex flex-wrap gap-1 pt-6 text-sm font-medium text-n400'>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/settings_icon.png' alt='' />
+                    <Image
+                      src='/assets/images/settings_icon.png'
+                      alt='Handyman icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
                     <span>Handyman</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/cleaning_icon.svg' alt='' />
-                    <span>Cleaning </span>
+                    <Image
+                      src='/assets/images/cleaning_icon.svg'
+                      alt='Cleaning icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Cleaning</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/tap_icon.png' alt='' />
-                    <span>Plumber </span>
+                    <Image
+                      src='/assets/images/tap_icon.png'
+                      alt='Plumber icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Plumber</span>
                   </p>
                   <p className='rounded-xl bg-b50 px-3 py-2'>+3</p>
                 </div>
@@ -45,16 +61,31 @@ const BrowseTasks = () => {
                 <p className='heading-5'>Full Garden Cleaning Solutions</p>
                 <div className='flex flex-wrap gap-1 pt-6 text-sm font-medium text-n400'>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/settings_icon.png' alt='' />
+                    <Image
+                      src='/assets/images/settings_icon.png'
+                      alt='Handyman icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
                     <span>Handyman</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/cleaning_icon.svg' alt='' />
-                    <span>Cleaning </span>
+                    <Image
+                      src='/assets/images/cleaning_icon.svg'
+                      alt='Cleaning icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Cleaning</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/tap_icon.png' alt='' />
-                    <span>Plumber </span>
+                    <Image
+                      src='/assets/images/tap_icon.png'
+                      alt='Plumber icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Plumber</span>
                   </p>
                   <p className='rounded-xl bg-b50 px-3 py-2'>+3</p>
                 </div>
@@ -76,16 +107,31 @@ const BrowseTasks = () => {
                 <p className='heading-5'>Sparkle Ease Cleaning Solutions</p>
                 <div className='flex flex-wrap gap-1 pt-6 text-sm font-medium text-n400'>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/settings_icon.png' alt='' />
+                    <Image
+                      src='/assets/images/settings_icon.png'
+                      alt='Handyman icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
                     <span>Handyman</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/cleaning_icon.svg' alt='' />
-                    <span>Cleaning </span>
+                    <Image
+                      src='/assets/images/cleaning_icon.svg'
+                      alt='Cleaning icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Cleaning</span>
                   </p>
                   <p className='flex items-center justify-center gap-2 rounded-xl bg-b50 px-3 py-2'>
-                    <img src='./assets/images/tap_icon.png' alt='' />
-                    <span>Plumber </span>
+                    <Image
+                      src='/assets/images/tap_icon.png'
+                      alt='Plumber icon'
+                      width={16} // Adjust based on design
+                      height={16} // Adjust based on design
+                    />
+                    <span>Plumber</span>
                   </p>
                   <p className='rounded-xl bg-b50 px-3 py-2'>+3</p>
                 </div>

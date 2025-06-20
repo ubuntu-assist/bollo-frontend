@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image' // Import Image from next/image
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import DeleteConfirmation from '@/components/common/delete-confirmation'
@@ -73,7 +74,6 @@ const Services = () => {
 
     // First day of the month and last day
     const firstDay = new Date(year, month, 1)
-    const lastDay = new Date(year, month + 1, 0)
 
     // Start from Sunday of the first week
     const startDate = new Date(firstDay)
@@ -345,7 +345,13 @@ const Services = () => {
             >
               <div className='flex items-center justify-start gap-6 max-md:flex-col xl:max-3xl:flex-col'>
                 <div className=''>
-                  <img src={service.image} className='rounded-xl' alt='' />
+                  <Image
+                    src={service.image}
+                    alt={`Service ${index + 1} image`}
+                    width={300} // Adjust based on your design
+                    height={200} // Adjust based on your design
+                    className='rounded-xl'
+                  />
                 </div>
                 <div className='flex flex-col gap-6'>
                   <div className='flex items-center justify-start gap-8'>
@@ -750,11 +756,11 @@ const Services = () => {
                           )}
                           {searchQuery && (
                             <span className='inline-flex items-center gap-1 px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full'>
-                              Search: "
+                              Search: &quot;
                               {searchQuery.length > 10
                                 ? searchQuery.substring(0, 10) + '...'
                                 : searchQuery}
-                              "
+                              &quot;
                               <button onClick={() => setSearchQuery('')}>
                                 <i className='ph ph-x text-xs'></i>
                               </button>
@@ -766,7 +772,7 @@ const Services = () => {
 
                     <div className='h-80 overflow-y-scroll border border-gray-200 rounded-lg bg-gray-50/50'>
                       <div className='p-2 space-y-2'>
-                        {filteredBookings.map((booking, index) => {
+                        {filteredBookings.map((booking) => {
                           const bookingDay = parseInt(
                             booking.date.split(' ')[1]
                           )

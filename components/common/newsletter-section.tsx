@@ -25,7 +25,7 @@ const NewsletterSection = () => {
             data-aos-duration='1000'
             data-aos-delay='0'
           >
-            Don't Miss a Beat with Our Newsletter
+            Don&apos;t Miss a Beat with Our Newsletter
           </h2>
         </div>
 

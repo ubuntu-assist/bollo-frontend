@@ -76,6 +76,7 @@ const validatePhoneNumber = (phoneNumber: string): boolean => {
   try {
     return phoneNumber ? isValidPhoneNumber(phoneNumber) : false
   } catch (error) {
+    console.log(error)
     return false
   }
 }
@@ -447,7 +448,7 @@ const MultiStepForm: React.FC = () => {
               className='h-4 w-4'
             />
             <p className='text-sm text-gray-600'>
-              I'm providing services as an individual
+              I&apos;m providing services as an individual
             </p>
           </div>
 

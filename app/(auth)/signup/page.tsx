@@ -2,6 +2,7 @@
 
 import MultiStepForm from '@/components/auth/multi-step-form'
 import Link from 'next/link'
+import Image from 'next/image' // Import Image from next/image
 import { FC } from 'react'
 
 const SignUp: FC = () => {
@@ -13,10 +14,13 @@ const SignUp: FC = () => {
           {/* Logo */}
           <div>
             <Link href='/'>
-              <img
+              <Image
                 src='/assets/images/logo.png'
                 alt='Bollo logo'
+                width={96} // Adjust width based on h-24 (~96px at default density)
+                height={96}
                 className='h-24 w-auto'
+                priority // Prioritize loading for logo
               />
             </Link>
           </div>

@@ -13,7 +13,6 @@ const WelcomeGuideWrapper: React.FC = () => {
 
     // Logic to determine if user is new
     const hasSeenTour = localStorage.getItem('bollo-tour-completed')
-    const userRegistrationDate = localStorage.getItem('user-registration-date')
 
     // Example logic - customize based on your needs
     if (!hasSeenTour) {

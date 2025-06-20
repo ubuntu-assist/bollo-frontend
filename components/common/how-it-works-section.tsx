@@ -20,12 +20,11 @@ interface Journey {
   steps: JourneyStep[]
 }
 
-const AnimatedHowItWorksSection = () => {
+const HowItWorksSection = () => {
   const [activeJourney, setActiveJourney] = useState<'client' | 'provider'>(
     'client'
   )
   const [currentStep, setCurrentStep] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
   // Client Journey Data
   const clientJourney: Journey = {
@@ -130,8 +129,6 @@ const AnimatedHowItWorksSection = () => {
 
   // Auto-play functionality
   useEffect(() => {
-    if (!isAutoPlaying) return
-
     const interval = setInterval(() => {
       setCurrentStep((prev) => {
         if (prev >= currentJourney.steps.length - 1) {
@@ -146,7 +143,7 @@ const AnimatedHowItWorksSection = () => {
     }, 3000)
 
     return () => clearInterval(interval)
-  }, [isAutoPlaying, currentJourney.steps.length])
+  }, [currentJourney.steps.length])
 
   // Reset step when journey changes
   useEffect(() => {
@@ -155,12 +152,10 @@ const AnimatedHowItWorksSection = () => {
 
   const handleStepClick = (stepIndex: number) => {
     setCurrentStep(stepIndex)
-    setIsAutoPlaying(false)
   }
 
   const handleJourneySwitch = (journey: 'client' | 'provider') => {
     setActiveJourney(journey)
-    setIsAutoPlaying(false)
   }
 
   return (
@@ -224,31 +219,6 @@ const AnimatedHowItWorksSection = () => {
                 Provider Journey
               </button>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Auto-play controls */}
-        <motion.div
-          className='flex items-center gap-4 mb-8'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <button
-            onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-              isAutoPlaying
-                ? 'bg-[#E31C79] text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            <i
-              className={`ph ${isAutoPlaying ? 'ph-pause' : 'ph-play'} text-lg`}
-            ></i>
-            {isAutoPlaying ? 'Pause' : 'Play'} Animation
-          </button>
-          <div className='text-sm text-gray-600'>
-            Step {currentStep + 1} of {currentJourney.steps.length}
           </div>
         </motion.div>
       </div>
@@ -361,7 +331,7 @@ const AnimatedHowItWorksSection = () => {
           </div>
 
           {/* Progress Bar */}
-          <div className='flex justify-center'>
+          <div className='flex justify-center mb-8'>
             <div className='flex items-center space-x-3'>
               {currentJourney.steps.map((_, index) => (
                 <motion.button
@@ -384,7 +354,7 @@ const AnimatedHowItWorksSection = () => {
           {/* Current Step Detail */}
           <motion.div
             key={`detail-${currentStep}`}
-            className='mt-12 text-center'
+            className='text-center'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -438,4 +408,4 @@ const AnimatedHowItWorksSection = () => {
   )
 }
 
-export default AnimatedHowItWorksSection
+export default HowItWorksSection

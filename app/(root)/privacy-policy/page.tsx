@@ -100,8 +100,8 @@ const PrivacyPolicy = () => {
                 We may update this Privacy Policy from time to time to reflect
                 changes in our practices or legal requirements. We will notify
                 you of any material changes by posting the updated policy on our
-                platform and updating the "Last Updated" date at the top of the
-                policy.
+                platform and updating the &quot;Last Updated&quot; date at the
+                top of the policy.
               </p>
             </div>
           </div>

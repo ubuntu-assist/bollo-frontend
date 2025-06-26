@@ -194,7 +194,7 @@ const Header = () => {
             <div className='fixed top-0 flex w-full items-center justify-between bg-[#1B3B86] p-4 sm:p-8'>
               <Link href='/'>
                 <img
-                  src='/assets/images/people_small1.png'
+                  src='/assets/images/logo.png'
                   alt='logo'
                   className='w-[150px]'
                 />

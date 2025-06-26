@@ -144,7 +144,7 @@ const UserInformation = () => {
               </p>
               <div>
                 <div>
-                  <img src='../assets/images/review_img.png' alt='' />
+                  <img src='/assets/images/review_img.png' alt='' />
                 </div>
                 <div className='flex gap-2 pt-2'>
                   <p className='flex items-center justify-start gap-2 text-sm font-semibold !leading-none'>

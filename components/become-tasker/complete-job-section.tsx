@@ -7,7 +7,7 @@ const CompleteJobSection = () => {
           {/* Notification Card */}
           <div className='absolute -top-10 left-[5%] flex items-center justify-between gap-2 rounded-2xl bg-white shadow-lg px-3 py-2 md:left-1 lg:left-8 lg:py-4 xl:left-16 xl:px-5 xxl:left-24'>
             <div>
-              <img src='./assets/images/fav.png' alt='Favorite icon' />
+              <img src='/assets/images/fav.png' alt='Favorite icon' />
             </div>
             <div>
               <div className='flex items-center justify-between gap-2 lg:gap-5'>

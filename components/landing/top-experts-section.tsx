@@ -90,11 +90,11 @@ const TopExpertsSection = () => {
                 {/* Skills */}
                 <div className='flex flex-wrap gap-2 text-gray-600'>
                   <span className='flex items-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium'>
-                    <img src='./assets/images/settings_icon.png' alt='' />
+                    <img src='/assets/images/settings_icon.png' alt='' />
                     Handyman
                   </span>
                   <span className='flex items-center gap-2 rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium'>
-                    <img src='./assets/images/tap_icon.png' alt='' />
+                    <img src='/assets/images/tap_icon.png' alt='' />
                     Plumber
                   </span>
                   <span className='rounded-xl bg-[#1B3B86]/5 px-3 py-2 font-medium'>

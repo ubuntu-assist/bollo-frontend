@@ -10,6 +10,7 @@
     "generate-icons": "node scripts/generate-icons.js"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.10",
     "@hookform/resolvers": "^5.0.1",
     "@phosphor-icons/web": "^2.1.2",
     "@radix-ui/react-accordion": "^1.2.8",
@@ -29,6 +30,7 @@
     "@radix-ui/react-tabs": "^1.1.9",
     "@radix-ui/react-tooltip": "^1.2.4",
     "@tabler/icons-react": "^3.31.0",
+    "@types/google.maps": "^3.58.1",
     "@types/matter-js": "^0.19.8",
     "@web3-onboard/injected-wallets": "^2.11.3",
     "@web3-onboard/react": "^2.11.0",
